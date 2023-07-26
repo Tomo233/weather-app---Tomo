@@ -7,3 +7,70 @@
 body {
   background-color: #222829;
 }
+
+section {
+  display: flex;
+  justify-content: center;
+  margin: 10% auto;
+}
+
+.weather-box {
+  background: rgb(0, 255, 244);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 244, 1) 15%,
+    rgba(0, 104, 255, 1) 100%
+  );
+  border-radius: 15px;
+  max-width: 400px;
+}
+.weather-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+}
+input {
+  max-width: 260px;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  place-self: center;
+  margin-top: 30px;
+}
+.main-img {
+  place-self: center;
+}
+.degrees {
+  place-self: center;
+  font-size: 60px;
+  color: white;
+  font-weight: 600;
+}
+.city {
+  place-self: center;
+  font-size: 50px;
+  color: white;
+}
+.second-content {
+  display: flex;
+  justify-content: space-around;
+  margin: 35px 15px 35px 30px;
+  gap: 30px;
+}
+
+.w-p {
+  font-size: 16px;
+  color: white;
+  margin-top: 10px;
+}
+.image-size {
+  height: 50px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
