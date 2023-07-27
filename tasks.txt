@@ -1,0 +1,3 @@
+1. Get User Location
+2. Load API with coords from geoLocation 
+3. Display Weather of City from GeoLocation with API
