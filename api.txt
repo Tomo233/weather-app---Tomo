@@ -1,3 +1,3 @@
-https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+api.openweathermap.org/data/3.0/onecall?lat=30.489772&lon=-99.771335
 e1f47746a8dabd2fdad32cfc006d8c9b
 https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
