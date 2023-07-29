@@ -1,3 +1,5 @@
-1. Load API with coords from geoLocation 
+1. Load API with coords from geoLocation
 2. Display Weather of City from GeoLocation with API
 if user search city that doesn't exist display error on screen
+remove error message after success search
+when we search for city twice need to remove first search

@@ -8,7 +8,7 @@ export const loadAPI = async function (city, api_key) {
       ` https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&units=metric&lang=hr`
     );
     if (!res.ok)
-      throw new Error(`${res.status} Grad koji ste pretrazili ne postoji !`);
+      throw new Error(`${res.status} Grad koji ste pretrazili ne postoji ! `);
     const data = await res.json();
     console.log(data);
     state.data = {
