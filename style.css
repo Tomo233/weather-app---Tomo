@@ -15,21 +15,20 @@ section {
 }
 
 .weather-box {
-  background: rgb(0, 255, 244);
+  /* background: rgb(0, 255, 244);
   background: linear-gradient(
     90deg,
     rgba(0, 255, 244, 1) 15%,
     rgba(0, 104, 255, 1) 100%
-  );
+  ); */
   border-radius: 15px;
   max-width: 400px;
-}
-.weather-content {
   display: grid;
   grid-template-columns: 1fr;
   place-content: center;
 }
-input {
+
+.search {
   max-width: 260px;
   height: 40px;
   border-radius: 15px;
@@ -73,4 +72,22 @@ input {
   display: flex;
   justify-content: space-between;
   gap: 15px;
+}
+.hidden {
+  display: none;
+}
+#search-box {
+  place-self: center;
+}
+.background {
+  background: rgb(0, 255, 244);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 244, 1) 15%,
+    rgba(0, 104, 255, 1) 100%
+  );
+}
+.box {
+  place-content: center;
+  display: grid;
 }

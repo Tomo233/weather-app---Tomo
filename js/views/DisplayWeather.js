@@ -1,16 +1,21 @@
 class DisplayWeather {
-  _parentEl = document.querySelector(".container");
+  _search = document.querySelector(".search");
+  _form = document.querySelector("form");
+  _weatherBox = document.querySelector(".weather-box");
+  _box = document.querySelector(".box");
+
   getQuery() {
-    return document.querySelector(".search").value;
+    const query = document.querySelector(".search").value;
+    this._search.value = "";
+    return query;
   }
 
   renderMarkup(data) {
     let markup = `
-    <div class="weather-box">
-    <div class="weather-content">
-      <input class="search" type="search" placeholder="Search" />
-      <img class="main-img" src="images/${data.img}.png" alt="" />
-      <p class="degrees">${Math.ceil(data.temp)}&#176;C</p>
+    <div class="box">
+    
+    <img class="main-img" src="images/${data.img}.png" alt="" />
+      <p class="degrees">${Math.round(data.temp)}&#176;C</p>
       <p class="city">${data.name}</p>
 
       <div class="second-content">
@@ -24,10 +29,25 @@ class DisplayWeather {
         </div>
       </div>
     </div>
-  </div>
     `;
-    this._parentEl.insertAdjacentHTML("afterbegin", markup);
+    this._weatherBox.insertAdjacentHTML("beforeend", markup);
+  }
+
+  addEvent(handler) {
+    this._form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      handler();
+      this._weatherBox.classList.add("background");
+    });
+  }
+
+  renderError(err) {
+    let markup = `
+    <div class="box">
+    <p>${err}</p>
+    </div>
+    `;
+    this._weatherBox.insertAdjacentHTML("beforeend", markup);
   }
 }
-
 export default new DisplayWeather();
